@@ -19,6 +19,11 @@ You can install the tool globally to use it anywhere on your system.
 uv tool install .
 ```
 
+or from PyPI:
+```bash
+uv tool install cwapi3d-starter
+```
+
 **Using pip:**
 ```bash
 # Run from the project root
