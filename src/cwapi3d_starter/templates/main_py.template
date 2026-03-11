@@ -1,0 +1,11 @@
+import utility_controller as uc
+import sys
+
+def main():
+    print(f"cadwork 3d Build Version: {uc.get_3d_build()}")
+    
+    # Example import usage
+    # from $package_name.cad.example_geometry import create_beams_example
+    # create_beams_example()
+
+
