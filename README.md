@@ -9,6 +9,24 @@ Project scaffolding CLI for cwapi3d users.
 
 ## Installation
 
+### Global Installation (User)
+
+You can install the tool globally to use it anywhere on your system.
+
+**Using uv (Recommended):**
+```bash
+# Run from the project root
+uv tool install .
+```
+
+**Using pip:**
+```bash
+# Run from the project root
+pip install .
+```
+
+### From Source (Development)
+
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/Brunner246/cwapi3d-starter.git
@@ -21,6 +39,16 @@ Project scaffolding CLI for cwapi3d users.
    ```
 
 ## Usage
+
+### If installed globally
+
+Once installed, you can run the `cwapi3d-starter` command directly from anywhere:
+
+```bash
+cwapi3d-starter <project_name> --directory <target_directory>
+```
+
+### If running from source
 
 To generate a new project using the CLI from the source:
 
