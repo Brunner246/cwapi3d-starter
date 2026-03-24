@@ -13,7 +13,7 @@ class ProjectGenerator:
     def __init__(self, project_name: str, target_dir: Path):
         self.project_name = project_name
         self.target_dir = target_dir
-        self.package_name = project_name.lower().replace("-", "_").replace(" ", "_")
+        self.package_name = "plugin"
         self.files = importlib.resources.files("cwapi3d_starter").joinpath("templates")
     
     def display_success(self):
@@ -40,8 +40,8 @@ class ProjectGenerator:
         console.print("Creating directories...")
         dirs = [
             self.target_dir,
-            self.target_dir / "src" / self.package_name,
-            self.target_dir / "src" / self.package_name / "cad",
+            self.target_dir / "app" / self.package_name,
+            self.target_dir / "app" / self.package_name / "cad",
             self.target_dir / ".vscode",
             self.target_dir / "tests",
             self.target_dir / "docs",
@@ -91,15 +91,15 @@ class ProjectGenerator:
             Template(self._read_template("entry_point_py.template")).substitute(context)
         )
 
-        (self.target_dir / "src" / self.package_name / "__init__.py").touch()
+        (self.target_dir / "app" / self.package_name / "__init__.py").touch()
         
         self._write_file(
-            self.target_dir / "src" / self.package_name / "main.py",
+            self.target_dir / "app" / self.package_name / "main.py",
             Template(self._read_template("main_py.template")).substitute(context)
         )
         
         self._write_file(
-            self.target_dir / "src" / self.package_name / "cad" / "example_geometry.py",
+            self.target_dir / "app" / self.package_name / "cad" / "example_geometry.py",
             self._read_template("example_geometry.py")
         )
 

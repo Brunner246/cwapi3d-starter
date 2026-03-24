@@ -2,14 +2,14 @@ import sys
 from pathlib import Path
 
 current_dir = Path(__file__).resolve().parent
-source_dir = Path(__file__).parent.absolute() / "src"
+source_dir = Path(__file__).parent.absolute() / "app"
 site_packages_dir = Path(__file__).parent / ".venv" / "Lib" / "site-packages"
 
 sys.path.insert(0, str(current_dir))
 sys.path.insert(0, str(source_dir))
 sys.path.insert(0, str(site_packages_dir))
 
-from $package_name.main import main
+from app.$package_name.main import main
 
 if __name__ == "__main__":
     main()

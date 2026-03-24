@@ -1,6 +1,6 @@
 [project]
 name = "cwapi3d-starter"
-version = "0.2.0"
+version = "0.3.0"
 description = "Project scaffolding for cwapi3d Python projects"
 readme = "README.md"
 requires-python = ">=3.12"
